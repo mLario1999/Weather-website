@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <button id="home-btn">Home</Button>
+            <button id="about-btn">About</button>
+        </nav>
+    </div>
+    <div id="weather-page-container">
+        <div id="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="search-bar" placeholder="Enter your location">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="not-found">
+            <img src="images/5411466.webp" alt="invalid-location">
+            <p>Oops! Invalid location, try again</p>
+        </div>
+        <div id="weather-box">
+            <img src="">
+            <p class="weather-main-detail-box" id="temperature"></p>
+            <p class="weather-main-detail-box" id="description"></p>
+        </div>
+        <div id="weather-details">
+            <div class="weather-side-detail-box" id="humidity">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="weather-side-detail-box" id="wind-speed">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
