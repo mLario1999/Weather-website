@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,9 +8,44 @@
 
 .header {
     background-color: #333;
-    padding: 10px;
+    padding: 50px;
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
 }
+
+.nav-bar {
+    display: flex;
+
+}
+
+.nav-bar button {
+
+    cursor: pointer;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color:#2c4e6b;
+    transition: 0.5s ease;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar button.active {
+    color: #fff;
+    background-color: #2c4e6b;
+}
+
+
+
+.nav-bar button:hover{
+    color: #fff;
+    background-color: #2c4e6b;
+}
+
 
 #mainpage-content {
     display: flex;
@@ -42,16 +77,175 @@
     justify-content: space-between;
 }
 
-#search-box input{
+#search-box input {
     width: 80%;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-left: 32px;
+    padding-left: 20px;
 }
 
 #search-box input::placeholder {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     text-transform: capitalize;
+    color: #2c4e6b;
+}
+
+#search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #2c4e6b;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: 0.4s ease;
+}
+
+#search-box button:hover {
+    color: #fff;
+    background-color: #2c4e6b;
+}
+
+#search-box i {
+    color: #2c4e6b;
+    font-size: 28px;
+    transition: 0.3s ease;
+}
+
+#weather-box {
+    text-align: center;
+}
+
+#weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+#temperature {
+    position: relative;
+    color: #2c4e6b;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+#temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+#description {
+    color: #2c4e6b;
+    font-size: 22p;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    scale: 0;
+    opacity: 0;
+
+}
+
+.weather-side-detail-box {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+#humidity {
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+#wind-speed {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+
+#weather-details i {
+    color: #2c4e6b;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+#weather-details span {
+    color: #2c4e6b;
+    font-size: 22px;
+}
+
+
+#weather-details p {
+    color: #2c4e6b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+#not-found img {
+    width: 70%;
+}
+
+#not-found p {
+    color: #2c4e6b;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.fade-in {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.3s;
+}
+
+.fly-out-left {
+    animation: 1s flyOutLeft ease-in-out forwards;
+}
+
+.fly-in-left {
+    animation: 1s flyInLeft ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+} 
+
+@keyframes flyOutLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes flyInLeft {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
